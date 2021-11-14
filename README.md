@@ -1,5 +1,5 @@
 # Bakery Shop
-A bakery shop website with a modal pop-up and an parallax effect made with HTML, CSS and Javascript. 
+A bakery shop website with a modal pop-up and a parallax effect made with HTML, CSS and Javascript. 
 
 [Live Demo] -> https://luizabarros.github.io/bakery-shop/
 
