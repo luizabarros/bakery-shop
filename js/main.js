@@ -3,8 +3,8 @@ trigger_active.addEventListener('click', startModal)
 addEventListener('scroll', startModal)
 
 function startModal() {
+    const modal_promocao = document.getElementById('modal')
     if (localStorage.modalDisappear != modal_promocao) {
-        const modal_promocao = document.getElementById('modal')
         modal_promocao.classList.add('show')
     
         var close_button = document.getElementsByClassName('close')[0]
