@@ -6,13 +6,13 @@ A bakery shop website with a modal pop-up and an parallax effect made with HTML,
 [Design preview]
 
 ### Desktop Version
-<img src="images/imgs/final-version/desktop.png" alt="Web Version"/>
+<img src="imgs/final-version/desktop.png" alt="Web Version"/>
 
 ### Modal
-<img src="images/imgs/final-version/modal.png" alt="Mobile Version"/>
+<img src="imgs/final-version/modal.png" alt="Mobile Version"/>
 
 ### Mobile Version
-<img src="images/imgs/final-version/mobile.png" alt="Mobile Version"/>
+<img src="imgs/final-version/mobile.png" alt="Mobile Version"/>
 
 ## 🚀 Starting
 
