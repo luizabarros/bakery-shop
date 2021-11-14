@@ -1,0 +1,252 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', serif;
+    text-decoration: none;
+}
+
+:root {
+    font-size: 62.5%;
+    --black: #000000;
+    --white: #ffffff;
+    --button-bg: #FF9500;
+    --card-bg: #A06235;
+    --box-shadow: #0000004b;
+    --modal-bg: #00000080;
+    --body-newsletter-bg: #f8f8f0;
+    --button-bg-hover: #FF8800;
+}
+
+body {
+    background: var(--body-newsletter-bg);
+}
+
+img {
+    max-width: 100%;
+}
+
+button {
+    padding: 1.2rem;
+    border: 0;
+    background: var(--button-bg);
+    box-shadow: 1rem 1rem 5rem var(--box-shadow);
+    font-weight: 500;
+    cursor: pointer;
+    transition: .25s;
+}
+
+button:hover {
+    background: var(--button-bg-hover);
+    letter-spacing: .1rem;
+}
+
+a {
+    font-weight: 500;
+    color: var(--black);
+}
+
+h2 {
+    font-size: 2.4rem;
+    padding: 1.5rem;
+}
+
+.main-button {
+    border-radius: 2rem;
+    margin: 1rem 0;
+}
+
+.header, .main, .footer {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 4rem;
+}
+
+.header-bg {
+    background: center / cover no-repeat url(https://source.unsplash.com//KMEqlxz3mKc);
+    height: 80rem;
+}
+
+.header .superinfo {
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-align: center;
+    max-width: 50rem;
+    padding-top: 1rem;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.superinfo span {
+    padding: 0 1rem 1rem 1rem;
+}
+
+.header .intro {
+    padding: 10rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+@media only screen and (max-width: 800px) {
+    .header .intro {
+        flex-direction: column;
+    }
+}
+
+.intro .intro-text h1 {
+    font-size: 4.8rem;
+}
+
+.main {
+    text-align: center;
+}
+
+.main .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+}
+
+@media only screen and (max-width: 620px) {
+    .main .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .main .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+.cards .card {
+    background: var(--card-bg);
+    border-radius: 2rem;
+    padding: 5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.card .card-text {
+    font-size: 1.6rem;
+    color: var(--white);
+}
+
+.card-text div {
+    padding-bottom: .8rem;
+}
+
+.card-text button {
+    border-radius: 1rem;
+}
+
+.footer-bg {
+    background: var(--black);
+}
+
+.footer {
+    margin-top: 6rem;
+    padding: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--white);
+}
+
+@media only screen and (max-width: 719px) {
+    .footer {
+        justify-content: center;
+    }
+}
+
+.footer p, .footer .social-field {
+    padding: 0 .5rem .5rem .5rem;
+}
+
+.footer .map {
+    height: 25rem;
+}
+
+@media only screen and (max-width: 330px) {
+    .footer .map {
+        width: 100%;
+    }
+}
+
+.modal-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--modal-bg);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 4rem;
+}
+
+.modal-container.show {
+    display: flex;
+}
+
+@keyframes newsletter {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.show .newsletter {
+    animation: newsletter .3s;
+}
+
+.newsletter {
+    background: var(--body-newsletter-bg);
+    padding: 5rem 4rem;
+    border-radius: 2rem;
+    box-shadow: 1rem 1rem 5rem var(--box-shadow);
+    position: relative;
+}
+
+.newsletter form {
+    display: flex;
+    flex-direction: column;
+}
+
+.newsletter form input {
+    background: var(--body-newsletter-bg);
+    border-radius: 2rem;
+    padding: 1.2rem;
+    outline: 0;
+    border: 0;
+}
+
+.newsletter .close {
+    position: absolute;
+    top: -1.5rem;
+    right: -.8rem;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 1rem 1.5rem;
+}
