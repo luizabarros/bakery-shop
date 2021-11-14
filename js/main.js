@@ -1,0 +1,18 @@
+var trigger_active = document.getElementById('trigger')
+trigger_active.addEventListener('click', startModal)
+addEventListener('scroll', startModal)
+
+function startModal() {
+    if (localStorage.modalDisappear != modal_promocao) {
+        const modal_promocao = document.getElementById('modal')
+        modal_promocao.classList.add('show')
+    
+        var close_button = document.getElementsByClassName('close')[0]
+        close_button.addEventListener('click', closeModal)
+    
+        function closeModal() {
+            modal_promocao.classList.remove('show')
+            localStorage.modalDisappear = modal_promocao
+        }
+    }
+}
