@@ -12,7 +12,7 @@ function startModal() {
     
         function closeModal() {
             modal_promocao.classList.remove('show')
-            var localStorage.modalDisappear = modal_promocao
+            localStorage.modalDisappear = modal_promocao
         }
     }
 }
